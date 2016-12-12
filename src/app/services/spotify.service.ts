@@ -10,6 +10,8 @@ import {Observable} from "rxjs";
 export class SpotifyService {
   private searchUrl: string;
   private artistUrl: string;
+  private albumsUrl: string;
+  private albumUrl: string;
 
   constructor(private _http: Http) {
   }
@@ -23,4 +25,18 @@ export class SpotifyService {
     this.artistUrl = 'https://api.spotify.com/v1/artists/'+id;
     return this._http.get(this.artistUrl).map(res => res.json());
   }
+
+  // get all albums of an artist
+  getAlbums(artistId:string){
+    this.albumsUrl = 'https://api.spotify.com/v1/artists/'+artistId+'/albums';
+    return this._http.get(this.albumsUrl).map(res => res.json());
+  }
+
+  // get a specific album of an artist
+  getAlbum(albumId:string){
+    this.albumUrl = 'https://api.spotify.com/v1/albums/'+albumId;
+    return this._http.get(this.albumUrl).map(res => res.json());
+  }
+
+
 }
