@@ -1,3 +1,13 @@
-<p>
-  search works!
-</p>
+<div class="container">
+  <h1>Explore Music</h1>
+  <p class="lead">You know the situations where you know an artist but not the song...or maybe the song title but not
+    the album.</p>
+  <p class="lead">The wait is over. Just search it here.</p>
+
+  <form>
+    <div class="form-group">
+      <input class="form-control" type="text" placeholder="Search music here..." [(ngModel)]="searchString"
+             name="searchString" (keyup)="searchMusic()">
+    </div>
+  </form>
+</div>
