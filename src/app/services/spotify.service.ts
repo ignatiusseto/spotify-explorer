@@ -4,6 +4,7 @@
 import {Injectable} from "@angular/core";
 import {Http} from "@angular/http"; // for http requests
 import "rxjs/add/operator/map";
+import {Observable} from "rxjs";
 
 @Injectable()
 export class SpotifyService {
