@@ -1,12 +1,11 @@
 <div class="container">
-  <h1>Explore Music</h1>
-  <p class="lead">You know the situations where you know an artist but not the song...or maybe the song title but not
-    the album.</p>
-  <p class="lead">The wait is over. Just search it here.</p>
+  <h1>Artist Explorer</h1>
+  <h2>Powered by Spotify</h2>
+  <h3 class="lead">You can search for your favorite artist on Spotify.</h3>
 
   <form>
     <div class="form-group">
-      <input class="form-control" type="text" placeholder="Search music here..." [(ngModel)]="searchString"
+      <input class="form-control" type="text" placeholder="Search artist here..." [(ngModel)]="searchString"
              name="searchString" (keyup)="searchMusic()">
     </div>
   </form>
